@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Wallet</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body class="walletpage">
+
+    <div id="wallet-page" class="container">
+        <header>
+            <br>
+            <h1>Wallet</h1>
+            <div class="card">
+                <p>Type: Credit Card</p>
+                <p>Name: Patrick Bateman</p>
+                <p>Card Number: 4567 1234 9876 4321</p>
+                <p>CVV: 852</p>
+                <p>Expiration Date: 05/28</p>
+            </div>
+            <div class="balance-info">
+                <p>Balance: <span id="balance">$2500</span></p>
+                <p>Deposit: <span id="deposit">+$450</span></p>
+                <p>Withdrawals: <span id="withdrawals">-$200</span></p>
+            </div>
+            <div class="add-funds">
+                <input type="number" id="add-amount" placeholder="Amount">
+                <button class="btn btn-dark" onclick="addFunds()">Add Funds</button>
+            </div>
+            <div class="send-money">
+                <label for="account">Choose Account:</label>
+                <select>
+                    <option value="user2">user2</option>
+                    <option value="user3">user3</option>
+                </select>
+                <input type="number" id="send-amount" placeholder="Amount">
+                <button class="btn btn-dark" onclick="sendMoney()">Send Money</button>
+            </div>
+        </main>
+
+        <div class="card transaction-history">
+            <div class="card-body">
+                <h5>Transaction History</h5>
+                <ul id="transactionList" class="list-group"></ul>
+            </div>
+        </div>
+
+    </div>
+
+      
+    <!-- Optional JavaScript -->
+    <script src="loadwalletnavbar.js"></script>
+    <script src="walletscript.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

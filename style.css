@@ -1,0 +1,250 @@
+.first-section {
+    background: url('../Pictures/homepagebg.jpg');
+    background-size: cover;
+    color: rgb(0, 0, 0);
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.first-section .btn {
+    background-color: #1e7e34;
+    border-color: #1c7430;
+}
+
+.first-section .mybanklogo{
+    margin-top: 5px; 
+    margin-bottom: 5px; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    font-size: 80px;
+}
+
+.first-sectionp2{
+    margin-top: 10vh;
+}
+
+.thirdsecp1 {
+    background-color: #1f3a63;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+.thirdsecp1 p {
+    color: rgba(255, 255, 255, 0.7);
+}
+.thirdsecp1 .btn {
+    margin-top: 20px;
+}
+.thirdsecp2 {
+    padding: 50px 0;
+}
+.articlecard {
+    border: none;
+    margin-bottom: 30px;
+}
+.articlecard img {
+    max-width: 100%;
+    height: auto;
+}
+
+.bottompart{
+    background-color: rgba(0, 124, 124);
+    text-align: center;
+    height: 40px;
+    width: 100%;
+
+}
+
+.sectionone{
+    margin-top: 8vh;
+    display: flex;
+    justify-content: center;
+}
+
+.sectiontwo{
+    margin-top: 4vh;
+    display: flex;
+    justify-content: center;
+}
+
+.sectionthree{
+    margin-top: 4vh;
+    display: flex;
+    justify-content: center;
+}
+
+.sectionone .button{
+    background-color: rgba(0, 124, 124);
+    border-color: rgba(0, 124, 124);
+}
+
+.feature-text-one{
+    text-align: left;
+}
+
+.search-blog{
+    max-width: 100%;
+    margin-bottom: 7vh;
+}
+
+.cards{
+    background-color: rgb(163, 179, 179);
+    height: 20vh;
+}
+
+.feature-picture{
+    width: 20vh;
+    height: 40vh;
+}
+
+.feature-text{
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+.contactpage{
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    text-align: center;
+}
+
+.features{
+    margin-bottom: 20vh;
+}
+
+.contact-icons{
+    max-width: 25px;
+    max-height: auto;
+}
+
+.feature-box {
+    text-align: left;
+}
+
+.feature-image {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.card, .balance-info, .add-funds {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-funds input {
+    width: 100px;
+    padding: 5px;
+}
+
+.add-funds button {
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+/* Wallet page */
+
+.walletpage header h2 {
+    margin: 0;
+}
+
+.walletpage nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.walletpage nav ul li {
+    margin: 10px 0;
+}
+
+.walletpage ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.card, .balance-info, .add-funds {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-funds input {
+    width: 100px;
+    padding: 5px;
+}
+
+.add-funds button {
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+/* loginpage */
+.walletloginpage body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #141E30, #243B55);
+}
+
+.container {
+    width: 100%;
+    max-width: 85%;
+    margin: auto;
+}
+
+.login-box {
+    margin-top: 5vh;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #243B55;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #141E30;
+}
+
+#error-message {
+    color: red;
+    margin-top: 10px;
+}
