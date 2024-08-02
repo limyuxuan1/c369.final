@@ -248,3 +248,54 @@
     color: red;
     margin-top: 10px;
 }
+
+.container-5 {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.container-5 h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.container-5 p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.container-5 .row {
+    display: flex;
+    justify-content: center;
+}
+
+.container-5 .col-md-4 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+    padding: 1rem;
+}
+
+.container-5 .card {
+    background-color: #a7c1d1;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-5 .card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.container-5 .cards h5 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.container-5 .cards p {
+    font-size: 0.875rem;
+    color: #fff;
+}
+
