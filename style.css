@@ -37,17 +37,19 @@
     color: rgba(255, 255, 255, 0.7);
 }
 .thirdsecp1 .btn {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .thirdsecp2 {
-    padding: 50px 0;
+    padding: 50px;
 }
 .articlecard {
     border: none;
     margin-bottom: 30px;
+    max-height: 600px;
 }
 .articlecard img {
     max-width: 100%;
+    max-height: 180px;
     height: auto;
 }
 
@@ -297,8 +299,8 @@
 }
 
 .testimonial-container img {
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     border-radius: 10px;
     margin-right: 24px;
     object-fit: cover;
@@ -320,3 +322,4 @@
     font-size: 16px;
     color: #333;
 }
+
