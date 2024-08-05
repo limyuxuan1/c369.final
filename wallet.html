@@ -8,23 +8,35 @@
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   </head>
   <body>
 
-    <div id="wallet-page" class="container">
-        <header>
-            <br>
-            <h1>Wallet</h1>
-            <div class="card">
-                <p>Type: Credit Card</p>
-                <p>Name: <span id="profilename">Patrick Batemen</span></p>
-                <p>Card Number: 4567 1234 9876 4321</p>
-                <p>CVV: 852</p>
-                <p>Expiration Date: 05/28</p>
-            </div>
-
-
+    <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+      <div class="card-container" id="cardContainer">
+        <div class="card">
+            <div>Type: Credit Card</div>
+            <div>Name: Patrick Bateman</div>
+            <div>Card Number: 4567 1234 9876 4321</div>
+            <div>CVV: 852</div>
+            <div>Expiration Date: 05/28</div>
+            <button class="btn btn-dark" onclick="selectCard(this)">Use this card</button>
+        </div>
     </div>
+
+    <button class="add-card-btn btn btn-primary my-2 my-sm-0" onclick="toggleForm()">Add Another Card</button>
+  </div>
+  
+  
+  <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+    <div class="form-container" id="formContainer">
+      <input class="addInput" type="text" id="name" placeholder="Name">
+      <input class="addInput" type="text" id="cardNumber" placeholder="Card Number">
+      <input class="addInput" type="text" id="cvv" placeholder="CVV">
+      <input class="addInput" type="text" id="expirationDate" placeholder="Expiration Date">
+      <button class='btn-primary btn' onclick="addCard()">Submit</button>
+  </div>
+  </div>
 
       
     <!-- Optional JavaScript -->

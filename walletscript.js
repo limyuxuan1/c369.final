@@ -1,8 +1,3 @@
-// Get the elements
-const loginForm = document.getElementById('login-form');
-const popup = document.getElementById('2fa-popup');
-const closePopup = document.getElementById('close-popup');
-const verifyBtn = document.getElementById('verify-btn');
 
 // name and pass
 let users = [
@@ -18,7 +13,15 @@ function login() {
     const user = users.find(users => users.username === username && users.password === password);
 
     if (user) {
-        window.location.href = 'walletmain.html';
+        const userCode = prompt('Enter the 2FA code sent to your device (code is 123):');
+        const twoFACode = "123";
+
+        if (userCode === twoFACode) {
+            window.location.href = "walletmain.html";
+            alert('Login successful!');
+        } else {
+            alert('Invalid 2FA code. Please try again.');
+        }
     } else {
         errorMessage.innerText = 'Wrong username or password.';
     }
@@ -110,13 +113,6 @@ function updateProfileName() {
     }
 }
 
-document.getElementById('edit-button').addEventListener('click', function() {
-    let newName = prompt('Enter new name:');
-    if (newName) {
-        document.getElementById('profilename').textContent = newName;
-        localStorage.setItem('username', newName);
-    }
-});
 
 function profilePage(){
     window.location.href ="wallet.html"
@@ -130,31 +126,59 @@ function viewHistory(){
     window.location.href ="wallethistory.html"
 }
 
+function mainPage(){
+    window.location.href = 'walletmain.html'
+;}
 
-// Handle form submission
-loginForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from submitting normally
+function toggleForm() {
+    const formContainer = document.getElementById('formContainer');
+    formContainer.style.display = formContainer.style.display === 'none' ? 'block' : 'none';
+}
 
-    // Simulate checking credentials and show the 2FA popup
-    // In a real application, you would validate the username and password
-    popup.style.display = 'flex';
-});
+function addCard() {
+    const name = document.getElementById('name').value;
+    const cardNumber = document.getElementById('cardNumber').value;
+    const cvv = document.getElementById('cvv').value;
+    const expirationDate = document.getElementById('expirationDate').value;
 
-// Handle closing the popup
-closePopup.addEventListener('click', function() {
-    popup.style.display = 'none';
-});
+    if (name && cardNumber && cvv && expirationDate) {
+        const cardContainer = document.getElementById('cardContainer');
+        const newCard = document.createElement('div');
+        newCard.classList.add('card');
+        newCard.innerHTML = `
+            <div>Type: Credit Card</div>
+            <div>Name: ${name}</div>
+            <div>Card Number: ${cardNumber}</div>
+            <div>CVV: ${cvv}</div>
+            <div>Expiration Date: ${expirationDate}</div>
+            <button onclick="selectCard(this)">Use this card</button>
+        `;
+        cardContainer.appendChild(newCard);
 
-// Handle 2FA verification
-verifyBtn.addEventListener('click', function() {
-    const code = document.getElementById('2fa-code').value;
+        document.getElementById('name').value = '';
+        document.getElementById('cardNumber').value = '';
+        document.getElementById('cvv').value = '';
+        document.getElementById('expirationDate').value = '';
 
-    // Simulate 2FA verification
-    // In a real application, you would send the code to the server for verification
-    if (code) {
-        alert('2FA code verified successfully!');
-        popup.style.display = 'none';
+        toggleForm();
     } else {
-        alert('Please enter the 2FA code.');
+        alert('Please fill in all fields.');
     }
+}
+
+function selectCard(button) {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        card.style.borderColor = '#ccc';
+        card.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
+    });
+    const selectedCard = button.parentElement;
+    selectedCard.style.borderColor = 'blue';
+    selectedCard.style.boxShadow = '0 0 10px rgba(0, 0, 255, 0.5)';
+    alert('This card is selected: ' + selectedCard.querySelector('div:nth-child(2)').textContent.split(': ')[1]);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    toggleForm();
 });
+
