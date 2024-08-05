@@ -1,3 +1,9 @@
+// Get the elements
+const loginForm = document.getElementById('login-form');
+const popup = document.getElementById('2fa-popup');
+const closePopup = document.getElementById('close-popup');
+const verifyBtn = document.getElementById('verify-btn');
+
 // name and pass
 let users = [
     { username: 'user', password: 'pass' }
@@ -123,3 +129,32 @@ function viewWallet(){
 function viewHistory(){
     window.location.href ="wallethistory.html"
 }
+
+
+// Handle form submission
+loginForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    // Simulate checking credentials and show the 2FA popup
+    // In a real application, you would validate the username and password
+    popup.style.display = 'flex';
+});
+
+// Handle closing the popup
+closePopup.addEventListener('click', function() {
+    popup.style.display = 'none';
+});
+
+// Handle 2FA verification
+verifyBtn.addEventListener('click', function() {
+    const code = document.getElementById('2fa-code').value;
+
+    // Simulate 2FA verification
+    // In a real application, you would send the code to the server for verification
+    if (code) {
+        alert('2FA code verified successfully!');
+        popup.style.display = 'none';
+    } else {
+        alert('Please enter the 2FA code.');
+    }
+});
