@@ -9,34 +9,37 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-  <body class="walletloginpage">
 
-     <div id="login-page" class="container">
-        <div class="login-box">
-            <h2>Login</h2>
-            <input type="text" id="login-username" placeholder="Username" required>
-            <input type="password" id="login-password" placeholder="Password" required>
-            <button onclick="login()">Login</button>
-            <p id="login-error-message"></p>
-            <p>Don't have an account? <a href="walletregister.html">Register</a></p>
+  <body>
+
+    <div class="walletpage">
+        <div class="profile-container">
+            <div class="profile-header">
+                <h1>Profile Details</h1>
+            </div>
+            <div class="profile-content">
+                <div class="profile-pic">
+                    <img src="default-avatar.png" alt="Profile Picture">
+                </div>
+                <div class="profile-info">
+                    <div class="profile-name">
+                        <span>Name:</span><span id="profile-name">Patrick Batemen</span>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <button onclick="profilePage()">Profile</button>
+                    <button onclick="viewWallet()">Wallet</button>
+                    <button onclick="viewHistory()">History</button>
+                </div>
+            </div>
         </div>
     </div>
+    
 
-    <div id="register-page" class="container" style="display: none;">
-        <div class="login-box">
-            <h2>Register</h2>
-            <input type="text" id="register-username" placeholder="Username" required>
-            <input type="password" id="register-password" placeholder="Password" required>
-            <button onclick="register()">Register</button>
-            <p id="register-error-message"></p>
-            <p>Already have an account? <a href="walletlogin.html">Login</a></p>
-        </div>
-    </div>
-
-    <script src="walletscript.js"></script>
       
     <!-- Optional JavaScript -->
-    <script src="loadnavbar.js"></script>
+    <script src="loadwalletnavbar.js"></script>
+    <script src="walletscript.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

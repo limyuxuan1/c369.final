@@ -53,12 +53,70 @@
     height: auto;
 }
 
-.bottompart{
-    background-color: rgba(0, 124, 124);
-    text-align: center;
-    height: 40px;
-    width: 100%;
+.walletpage{
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    margin: 0;
+}
 
+.profile-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+}
+
+.profile-header {
+    background-color: #006c97;
+    padding: 20px;
+    color: white;
+}
+
+.profile-content {
+    padding: 20px;
+}
+
+.profile-pic img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-info {
+    margin-bottom: 20px;
+}
+
+.profile-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile-name span:first-child {
+    font-weight: bold;
+}
+
+
+.profile-actions button {
+    background-color: #1cbfff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    width: 100%;
+}
+
+.profile-actions button:hover {
+    background-color: #6fb3d2;
 }
 
 .sectionone{
@@ -321,5 +379,43 @@
 .testimonial-container p {
     font-size: 16px;
     color: #333;
+}
+
+
+.carousel-item {
+    text-align: center;
+}
+.carousel-item img {
+    width: auto;
+    height: 300px;
+    border-radius: 10px;
+}
+.carousel-caption {
+    position: static;
+    color: #333;
+    font-size: medium;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:200;
+}
+.quote-symbol {
+    font-size: 2rem;
+    vertical-align: middle;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff0000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+   }
+   
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff0000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.footer {
+    background-color: #004b54; 
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 1;
 }
 

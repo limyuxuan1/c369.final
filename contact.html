@@ -29,39 +29,45 @@
                         <input type="email" class="form-control" id="email" placeholder="Enter your email">
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+                        <label for="phone">Your Phone Number</label>
+                        <input type="phone" class="form-control" id="email" placeholder="Enter your phone number">
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" onclick="sendMessage()">Send Message</button>
                 </form>
             </div>
             <div class="col-md-6">
                 <h3>Contact Us</h3>
-                <p>contact</p>
+                <br>
                 <ul class="list-unstyled">
                     <li>
-                        <h5> <img src="../Pictures/icon6.jpg" class="contact-icons"> Head Office</h5>
+                        <h5> <img src="icon6.jpg" class="contact-icons"> Head Office</h5>
                         <p>BBB Ohio St. South Sofa, California 90208</p>
                     </li>
                     <li>
-                        <h5> <img src="../Pictures/icon8.jpg" class="contact-icons"> Our Email</h5>
+                        <h5> <img src="icon8.jpg" class="contact-icons"> Our Email</h5>
                         <p>hello@finteku.com</p>
                     </li>
                     <li>
-                        <h5> <img src="../Pictures/icon7.jpg" class="contact-icons"> Call Center</h5>
-                        <p>nnumber</p>
+                        <h5> <img src="icon7.jpg" class="contact-icons"> Call Center</h5>
+                        <p>+65 8777 5555</p>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <!-- <div class="bottompart text-mute">
-        <h4 style="font-size: medium; font-weight: bold; color: white;";>@ 2024 MyBank. All rights reserved.</h4>
-    </div> -->
       
     <!-- Optional JavaScript -->
      <script src="loadnavbar.js"></script>
+     <script>
+        function sendMessage(){
+            alert("Message sent!")
+        }
+     </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

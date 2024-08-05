@@ -8,10 +8,11 @@ function login() {
     const password = document.getElementById('login-password').value;
     const errorMessage = document.getElementById('login-error-message');
     
+    const users=JSON.parse(localStorage.getItem('users')) || [];
     const user = users.find(users => users.username === username && users.password === password);
 
     if (user) {
-        window.location.href = 'wallet.html';
+        window.location.href = 'walletmain.html';
     } else {
         errorMessage.innerText = 'Wrong username or password.';
     }
@@ -33,23 +34,16 @@ function register() {
             errorMessage.innerText = 'Username already exists.';
         } else {
             users.push({ username: username, password: password });
+            localStorage.setItem('users', JSON.stringify(users));
             console.log(users[1]);
             alert('Registration successful! Please log in.');
+            window.location.href = "walletlogin.html";
         }
     } else {
         errorMessage.innerText = 'Please fill in both fields.';
     }
 }
 
-function showRegisterForm() {
-    document.getElementById('login-page').style.display = 'none';
-    document.getElementById('register-page').style.display = 'block';
-}
-
-function showLoginForm() {
-    document.getElementById('register-page').style.display = 'none';
-    document.getElementById('login-page').style.display = 'block';
-}
 
 let amount = 2500
 
@@ -90,11 +84,42 @@ function sendMoney() {
     }
 }
 
+newTransaction = [];
+myHistory=[];
+
 function addTransaction(type, amount, account = '') {
-    const transactionList = document.getElementById('transactionList');
-    const newTransaction = document.createElement('li');
-    newTransaction.className = 'list-group-item';
-    newTransaction.innerText = `${type} $${amount} ${account ? 'to ' + account : ''}`;
-    transactionList.appendChild(newTransaction);
+    //const transactionList = document.getElementById('transactionList');
+    const history = `${type} $${amount} ${account ? 'to ' + account : ''}`;
+    myHistory.push(history);
+    localStorage.setItem('myHistory', JSON.stringify(myHistory));
+    console.log(newTransaction);
+    const historyString = localStorage.getItem("myHistory");
+    console.log(historyString);
 }
 
+function updateProfileName() {
+    const storedName = localStorage.getItem('username');
+    if (storedName) {
+        document.getElementById('profilename').textContent = storedName;
+    }
+}
+
+document.getElementById('edit-button').addEventListener('click', function() {
+    let newName = prompt('Enter new name:');
+    if (newName) {
+        document.getElementById('profilename').textContent = newName;
+        localStorage.setItem('username', newName);
+    }
+});
+
+function profilePage(){
+    window.location.href ="wallet.html"
+}
+
+function viewWallet(){
+    window.location.href ="walletfunds.html"
+}
+
+function viewHistory(){
+    window.location.href ="wallethistory.html"
+}
